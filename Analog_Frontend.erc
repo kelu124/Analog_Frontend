@@ -1,0 +1,26 @@
+ERC report (Thursday, May 18, 2017 'AMt' 12:05:34 AM, Encoding UTF8 )
+
+***** Sheet /
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (10.200 in,4.850 in): Pin 1 (Power input) of component #PWR036 is not driven (Net 2).
+ErrType(8): Global label not connected to any other global label
+    @ (5.900 in,1.600 in): Global label Vpiezo is not connected to any other global label.
+ErrType(4): Conflict problem between pins. Severity: warning
+    @ (6.800 in,3.400 in): Pin 1 (Unspecified) of component U5 is connected to 
+    @ (6.700 in,3.400 in): pin 2 (Passive) of component CLMD1 (net 9).
+ErrType(4): Conflict problem between pins. Severity: warning
+    @ (3.100 in,6.800 in): Pin 1 (Passive) of component C21 is connected to 
+    @ (2.900 in,6.800 in): pin 5 (Unspecified) of component U6 (net 15).
+ErrType(8): Global label not connected to any other global label
+    @ (1.700 in,7.050 in): Global label V_ENVLP is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (6.500 in,5.550 in): Global label GAIN is not connected to any other global label.
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (6.800 in,3.900 in): Pin 3 (Power input) of component U5 is not driven (Net 45).
+ErrType(4): Conflict problem between pins. Severity: warning
+    @ (7.800 in,5.650 in): Pin 1 (Passive) of component C19 is connected to 
+    @ (7.750 in,5.650 in): pin 11 (Unspecified) of component U5 (net 46).
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (7.750 in,4.900 in): Pin 14 (Power input) of component U5 is not driven (Net 47).
+
+ ** ERC messages: 9  Errors 0  Warnings 9
