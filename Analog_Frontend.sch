@@ -160,7 +160,7 @@ L C C21
 U 1 1 58FBF128
 P 3100 6950
 F 0 "C21" H 3125 7050 50  0000 L CNN
-F 1 "6.8nF" H 3200 6900 50  0000 L CNN
+F 1 "2.2nF" H 3200 6900 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3138 6800 50  0001 C CNN
 F 3 "" H 3100 6950 50  0001 C CNN
 	1    3100 6950
@@ -1593,4 +1593,6 @@ Text Label 3100 6500 2    60   ~ 0
 RFin
 Text Label 3100 6800 2    60   ~ 0
 PCAP
+Text Notes 2750 6650 0    20   ~ 0
+Decreasing the value of PCAP makes the signal have a faster fall time. We \nshould find that smallest capacitance possible that will track the envelope \nwithout tracking individual peaks of the envelope.
 $EndSCHEMATC

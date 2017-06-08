@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source "/Users/wlmeng/Documents/workspace/olc_ultra/Analog Frontend PCB/Analog_Frontend.sch")
-    (date "Friday, May 19, 2017 'PMt' 06:44:24 PM")
+    (source /Users/wlmeng/workspace/olc_ultra/Analog_Frontend_PCB/Analog_Frontend.sch)
+    (date "Thursday, June 08, 2017 'PMt' 04:03:18 PM")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -53,7 +53,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 58FBDBA6))
     (comp (ref C21)
-      (value 6.8nF)
+      (value 2.2nF)
       (footprint Capacitors_SMD:C_0603)
       (libsource (lib device) (part C))
       (sheetpath (names /) (tstamps /))
@@ -631,16 +631,16 @@
         (pin (num 1) (name 1) (type input))
         (pin (num 2) (name 2) (type input)))))
   (libraries
-    (library (logical regul)
-      (uri "/Library/Application Support/kicad/library/regul.lib"))
     (library (logical linear)
       (uri "/Library/Application Support/kicad/library/linear.lib"))
+    (library (logical regul)
+      (uri "/Library/Application Support/kicad/library/regul.lib"))
     (library (logical conn)
       (uri "/Library/Application Support/kicad/library/conn.lib"))
     (library (logical device)
       (uri "/Library/Application Support/kicad/library/device.lib"))
     (library (logical Analog_Frontend-cache)
-      (uri "/Users/wlmeng/Documents/workspace/olc_ultra/Analog Frontend PCB/Analog_Frontend-cache.lib")))
+      (uri /Users/wlmeng/workspace/olc_ultra/Analog_Frontend_PCB/Analog_Frontend-cache.lib)))
   (nets
     (net (code 1) (name "Net-(CFB1-Pad2)")
       (node (ref CFB1) (pin 2))
