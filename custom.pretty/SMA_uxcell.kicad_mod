@@ -1,9 +1,9 @@
-(module SMA_uxcell (layer F.Cu) (tedit 591E798E)
+(module SMA_uxcell (layer F.Cu) (tedit 5942F856)
   (tags "SMA Connector")
-  (fp_text reference SMA (at 0 5.08) (layer F.SilkS)
+  (fp_text reference J3 (at 0 5.08) (layer F.SilkS)
     (effects (font (thickness 0.3048)))
   )
-  (fp_text value VAL** (at 1.27 7.62) (layer F.SilkS)
+  (fp_text value CONN_COAXIAL (at 1.27 7.62) (layer F.SilkS) hide
     (effects (font (thickness 0.3048)))
   )
   (fp_line (start -3.1496 -3.1496) (end 3.1496 -3.1496) (layer F.SilkS) (width 0.381))
