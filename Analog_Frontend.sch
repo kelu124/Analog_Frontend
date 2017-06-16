@@ -1220,10 +1220,6 @@ Text Label 7750 4900 0    60   ~ 0
 VGA_PWR
 Text Label 7750 5150 0    60   ~ 0
 VGA_PWR
-Text Label 7850 3900 0    60   ~ 0
-VGA_PWR
-Text Label 7850 3650 0    60   ~ 0
-VGA_PWR
 Connection ~ 3850 3200
 Wire Wire Line
 	3850 3200 3850 3300
@@ -1651,4 +1647,26 @@ Text GLabel 4800 6700 0    60   Input ~ 0
 V_ENVLP
 Text Notes 4650 6500 0    60   ~ 0
 Edge Connector
+$Comp
+L +5V #PWR?
+U 1 1 5944A2F3
+P 7850 3650
+F 0 "#PWR?" H 7850 3500 50  0001 C CNN
+F 1 "+5V" H 7850 3790 50  0000 C CNN
+F 2 "" H 7850 3650 50  0001 C CNN
+F 3 "" H 7850 3650 50  0001 C CNN
+	1    7850 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5944A500
+P 7850 3900
+F 0 "#PWR?" H 7850 3750 50  0001 C CNN
+F 1 "+5V" H 7850 4040 50  0000 C CNN
+F 2 "" H 7850 3900 50  0001 C CNN
+F 3 "" H 7850 3900 50  0001 C CNN
+	1    7850 3900
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
