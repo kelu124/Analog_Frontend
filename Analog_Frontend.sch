@@ -1226,10 +1226,10 @@ Text Label 7850 3650 0    60   ~ 0
 VGA_PWR
 Connection ~ 3850 3200
 Wire Wire Line
-	3850 3300 3850 3200
+	3850 3200 3850 3300
 Connection ~ 3500 3200
 Wire Wire Line
-	3500 3300 3500 3200
+	3500 3200 3500 3300
 Wire Notes Line
 	4900 5200 4900 2900
 Wire Notes Line
@@ -1251,7 +1251,7 @@ Wire Notes Line
 Wire Notes Line
 	10400 2800 5000 2800
 Wire Wire Line
-	6600 3450 6250 3450
+	6250 3450 6600 3450
 Wire Notes Line
 	3250 1500 3950 1500
 Wire Wire Line
@@ -1303,7 +1303,7 @@ Wire Wire Line
 	7700 1950 7700 2000
 Connection ~ 6600 3650
 Wire Wire Line
-	6600 3650 6600 3450
+	6600 3450 6600 3650
 Connection ~ 6600 4150
 Wire Wire Line
 	6600 3850 6600 3950
@@ -1322,7 +1322,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 1050 4350 1000
 Wire Wire Line
-	8750 1500 9200 1500
+	9200 1500 8750 1500
 Wire Wire Line
 	1500 3800 2200 3800
 Connection ~ 10000 4650
@@ -1370,7 +1370,7 @@ Wire Wire Line
 	1400 1550 1400 1650
 Connection ~ 3250 7100
 Wire Wire Line
-	3250 7200 3250 7100
+	3250 7100 3250 7200
 Connection ~ 7800 5650
 Wire Wire Line
 	8650 4650 8600 4650
@@ -1408,7 +1408,7 @@ Connection ~ 6350 3450
 Wire Wire Line
 	5950 3450 6050 3450
 Wire Wire Line
-	6800 3650 6600 3650
+	6600 3650 6800 3650
 Connection ~ 5750 3900
 Wire Wire Line
 	5650 3900 6800 3900
@@ -1522,7 +1522,7 @@ Wire Wire Line
 	2900 6800 3100 6800
 Connection ~ 9200 1500
 Wire Wire Line
-	9200 1500 9200 1300
+	9200 1300 9200 1500
 Connection ~ 8900 1500
 Connection ~ 8900 1600
 Wire Wire Line
@@ -1595,4 +1595,60 @@ Text Label 3100 6800 2    60   ~ 0
 PCAP
 Text Notes 2750 6650 0    20   ~ 0
 Decreasing the value of PCAP makes the signal have a faster fall time. We \nshould find that smallest capacitance possible that will track the envelope \nwithout tracking individual peaks of the envelope.
+NoConn ~ 5700 2850
+Wire Wire Line
+	5300 6700 5350 6700
+Wire Wire Line
+	5350 6700 5350 7250
+Wire Wire Line
+	5300 6800 5350 6800
+Connection ~ 5350 6800
+Wire Wire Line
+	5300 6900 5350 6900
+Connection ~ 5350 6900
+Wire Wire Line
+	5300 7000 5350 7000
+Connection ~ 5350 7000
+Wire Wire Line
+	5300 7100 5350 7100
+Connection ~ 5350 7100
+Wire Wire Line
+	5350 7200 5300 7200
+Connection ~ 5350 7200
+Text GLabel 4800 7200 0    60   Input ~ 0
+VDD
+Text Label 4800 7100 2    60   ~ 0
+PULSE
+Text GLabel 4800 7000 0    60   Input ~ 0
+GAIN
+$Comp
+L CONN_02X06 J5
+U 1 1 594448F5
+P 5050 6950
+F 0 "J5" H 5050 7300 50  0000 C CNN
+F 1 "CONN_02X06" H 5050 6600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x06_Pitch2.54mm" H 5050 5750 50  0001 C CNN
+F 3 "" H 5050 5750 50  0001 C CNN
+	1    5050 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR041
+U 1 1 59444FED
+P 5350 7250
+F 0 "#PWR041" H 5350 7000 50  0001 C CNN
+F 1 "GND" H 5350 7100 50  0000 C CNN
+F 2 "" H 5350 7250 50  0001 C CNN
+F 3 "" H 5350 7250 50  0001 C CNN
+	1    5350 7250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4800 6900 0    60   Input ~ 0
+V_VGA
+Text GLabel 4800 6800 0    60   Input ~ 0
+V_AMP
+Text GLabel 4800 6700 0    60   Input ~ 0
+V_ENVLP
+Text Notes 4650 6500 0    60   ~ 0
+Edge Connector
 $EndSCHEMATC
