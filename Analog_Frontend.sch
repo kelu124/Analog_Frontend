@@ -36,7 +36,7 @@ encoding utf-8
 Sheet 1 1
 Title "Analog Frontend for Low Cost Ultrasound Device"
 Date "2017-07-31"
-Rev "v2.0"
+Rev "v2.1"
 Comp "Columbia University - Creative Machines Lab"
 Comment1 ""
 Comment2 ""
@@ -513,7 +513,7 @@ F 3 "" H 9150 4450 50  0001 C CNN
 	1    9150 4450
 	1    0    0    -1  
 $EndComp
-Text GLabel 10000 4700 3    60   Input ~ 0
+Text GLabel 9950 4650 2    60   Input ~ 0
 V_VGA
 $Comp
 L C C17
@@ -675,8 +675,6 @@ F 3 "" H 7150 1900 60  0001 C CNN
 	1    7150 1750
 	1    0    0    -1  
 $EndComp
-Text GLabel 5900 1600 3    60   Input ~ 0
-Vpiezo
 Text Notes 3150 650  0    80   ~ 0
 Transmitter
 Text Notes 8250 650  0    80   ~ 0
@@ -706,8 +704,6 @@ F 3 "" H 6150 3450 50  0001 C CNN
 	1    6150 3450
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1600 7025 1    60   Input ~ 0
-V_ENVLP
 $Comp
 L GND #PWR024
 U 1 1 5921C538
@@ -757,9 +753,6 @@ Text Label 3100 6800 2    60   ~ 0
 PCAP
 Text Notes 2750 6650 0    20   ~ 0
 Decreasing the value of PCAP makes the signal have a faster fall time. We \nshould find that smallest capacitance possible that will track the envelope \nwithout tracking individual peaks of the envelope.
-NoConn ~ 5700 2850
-Text GLabel 4750 7050 0    60   Input ~ 0
-5V
 Text Label 4750 6850 2    60   ~ 0
 PULSE
 Text GLabel 4750 6950 0    60   Input ~ 0
@@ -870,46 +863,46 @@ $EndComp
 $Comp
 L Screw_Terminal_1x01 J6
 U 1 1 5980FFF4
-P 4850 3000
-F 0 "J6" H 4850 3150 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4700 3000 50  0000 C TNN
-F 2 "custom:SCREWM3" H 4850 2875 50  0001 C CNN
-F 3 "" H 4850 2900 50  0001 C CNN
-	1    4850 3000
-	1    0    0    -1  
+P 1250 3750
+F 0 "J6" H 1250 3900 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 1100 3750 50  0000 C TNN
+F 2 "custom:SCREWM3" H 1250 3625 50  0001 C CNN
+F 3 "" H 1250 3650 50  0001 C CNN
+	1    1250 3750
+	0    1    1    0   
 $EndComp
 $Comp
 L Screw_Terminal_1x01 J2
 U 1 1 598103B0
-P 4850 3850
-F 0 "J2" H 4850 4000 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4700 3850 50  0000 C TNN
-F 2 "custom:SCREWM3" H 4850 3725 50  0001 C CNN
-F 3 "" H 4850 3750 50  0001 C CNN
-	1    4850 3850
-	1    0    0    -1  
+P 1250 4200
+F 0 "J2" H 1250 4350 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 1100 4200 50  0000 C TNN
+F 2 "custom:SCREWM3" H 1250 4075 50  0001 C CNN
+F 3 "" H 1250 4100 50  0001 C CNN
+	1    1250 4200
+	0    1    1    0   
 $EndComp
 $Comp
 L Screw_Terminal_1x01 J3
 U 1 1 59810461
-P 4850 5600
-F 0 "J3" H 4850 5750 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4700 5600 50  0000 C TNN
-F 2 "custom:SCREWM3" H 4850 5475 50  0001 C CNN
-F 3 "" H 4850 5500 50  0001 C CNN
-	1    4850 5600
-	1    0    0    -1  
+P 2250 4200
+F 0 "J3" H 2250 4350 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 2100 4200 50  0000 C TNN
+F 2 "custom:SCREWM3" H 2250 4075 50  0001 C CNN
+F 3 "" H 2250 4100 50  0001 C CNN
+	1    2250 4200
+	0    1    1    0   
 $EndComp
 $Comp
 L Screw_Terminal_1x01 J4
 U 1 1 59810517
-P 4850 4700
-F 0 "J4" H 4850 4850 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4700 4700 50  0000 C TNN
-F 2 "custom:SCREWM3" H 4850 4575 50  0001 C CNN
-F 3 "" H 4850 4600 50  0001 C CNN
-	1    4850 4700
-	1    0    0    -1  
+P 2250 3750
+F 0 "J4" H 2250 3900 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 2100 3750 50  0000 C TNN
+F 2 "custom:SCREWM3" H 2250 3625 50  0001 C CNN
+F 3 "" H 2250 3650 50  0001 C CNN
+	1    2250 3750
+	0    1    1    0   
 $EndComp
 Text GLabel 3400 1000 0    60   Input ~ 0
 20V
@@ -994,6 +987,91 @@ Text Label 3300 2000 3    60   ~ 0
 PULSE
 Text GLabel 4750 6750 0    60   Input ~ 0
 20V
+NoConn ~ 1250 3950
+NoConn ~ 1250 4400
+NoConn ~ 2250 3950
+NoConn ~ 2250 4400
+$Comp
+L PWR_FLAG #FLG033
+U 1 1 59CEC005
+P 8750 3450
+F 0 "#FLG033" H 8750 3525 50  0001 C CNN
+F 1 "PWR_FLAG" H 8750 3600 50  0000 C CNN
+F 2 "" H 8750 3450 50  0001 C CNN
+F 3 "" H 8750 3450 50  0001 C CNN
+	1    8750 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR034
+U 1 1 59CED31B
+P 4750 7050
+F 0 "#PWR034" H 4750 6900 50  0001 C CNN
+F 1 "+5V" H 4750 7190 50  0000 C CNN
+F 2 "" H 4750 7050 50  0001 C CNN
+F 3 "" H 4750 7050 50  0001 C CNN
+	1    4750 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR035
+U 1 1 59CED5B0
+P 4750 7600
+F 0 "#PWR035" H 4750 7450 50  0001 C CNN
+F 1 "+5V" H 4750 7740 50  0000 C CNN
+F 2 "" H 4750 7600 50  0001 C CNN
+F 3 "" H 4750 7600 50  0001 C CNN
+	1    4750 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG036
+U 1 1 59CED650
+P 4750 7600
+F 0 "#FLG036" H 4750 7675 50  0001 C CNN
+F 1 "PWR_FLAG" H 4750 7750 50  0000 C CNN
+F 2 "" H 4750 7600 50  0001 C CNN
+F 3 "" H 4750 7600 50  0001 C CNN
+	1    4750 7600
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR037
+U 1 1 59CEDA6C
+P 5100 7600
+F 0 "#PWR037" H 5100 7350 50  0001 C CNN
+F 1 "GND" H 5100 7450 50  0000 C CNN
+F 2 "" H 5100 7600 50  0001 C CNN
+F 3 "" H 5100 7600 50  0001 C CNN
+	1    5100 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG038
+U 1 1 59CEDB0A
+P 5100 7600
+F 0 "#FLG038" H 5100 7675 50  0001 C CNN
+F 1 "PWR_FLAG" H 5100 7750 50  0000 C CNN
+F 2 "" H 5100 7600 50  0001 C CNN
+F 3 "" H 5100 7600 50  0001 C CNN
+	1    5100 7600
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 7600 1    60   Input ~ 0
+20V
+$Comp
+L PWR_FLAG #FLG039
+U 1 1 59CEF568
+P 4300 7600
+F 0 "#FLG039" H 4300 7675 50  0001 C CNN
+F 1 "PWR_FLAG" H 4300 7750 50  0000 C CNN
+F 2 "" H 4300 7600 50  0001 C CNN
+F 3 "" H 4300 7600 50  0001 C CNN
+	1    4300 7600
+	-1   0    0    1   
+$EndComp
+Text Label 1600 7100 1    60   ~ 0
+V_ENVLP
 Wire Notes Line
 	10400 6200 10400 2800
 Wire Notes Line
@@ -1045,19 +1123,12 @@ Wire Wire Line
 	6600 3850 6600 3950
 Wire Wire Line
 	9200 1500 8750 1500
-Connection ~ 10000 4650
-Wire Wire Line
-	10000 4650 10000 4700
-Wire Wire Line
-	9950 4650 10050 4650
 Connection ~ 6500 5650
 Wire Wire Line
 	6500 5550 6500 5650
 Connection ~ 9200 1350
 Wire Wire Line
 	9150 1350 9200 1350
-Wire Notes Line
-	3100 2500 3100 1300
 Connection ~ 3250 7100
 Wire Wire Line
 	3250 7100 3250 7200
@@ -1161,8 +1232,6 @@ Wire Wire Line
 Wire Wire Line
 	2900 6800 3100 6800
 Connection ~ 9200 1500
-Wire Wire Line
-	9200 1300 9200 1500
 Connection ~ 8900 1500
 Connection ~ 8900 1600
 Wire Wire Line
@@ -1182,8 +1251,6 @@ Wire Wire Line
 	8800 1600 9100 1600
 Wire Wire Line
 	8800 1700 8800 1600
-Wire Wire Line
-	1600 7025 1600 7300
 Wire Wire Line
 	6800 3400 6700 3400
 Wire Wire Line
@@ -1207,8 +1274,6 @@ Wire Wire Line
 Connection ~ 5300 7050
 Wire Notes Line
 	5400 2500 3100 2500
-Wire Notes Line
-	3100 2450 3100 650 
 Wire Notes Line
 	5000 2800 5000 6200
 Wire Notes Line
@@ -1250,6 +1315,17 @@ Wire Wire Line
 	3750 2400 5050 2400
 Wire Wire Line
 	3400 1000 3450 1000
-Connection ~ 5600 1500
 Connection ~ 5050 1500
+Wire Wire Line
+	9200 1350 9200 1500
+Wire Notes Line
+	5400 700  3100 700 
+Wire Notes Line
+	3100 700  3100 2500
+Wire Wire Line
+	1600 7300 1600 7100
+Text Notes 1200 3450 0    60   ~ 0
+Holes for Mounting screws
+Text Label 5900 1600 3    60   ~ 0
+Vpiezo
 $EndSCHEMATC
