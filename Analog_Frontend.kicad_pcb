@@ -2,8 +2,8 @@
 
   (general
     (links 99)
-    (no_connects 4)
-    (area 128.448999 87.681999 166.699001 113.232001)
+    (no_connects 0)
+    (area 119.378499 87.535 175.412001 115.8053)
     (thickness 1.6)
     (drawings 16)
     (tracks 328)
@@ -16,7 +16,7 @@
   (title_block
     (title "Analog Frontend PCB")
     (date 2017-07-31)
-    (rev v1.4)
+    (rev v2.1b)
     (company "Columbia University Creative Machines Lab")
   )
 
@@ -95,7 +95,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory gerbers/v1.3/))
+      (outputdirectory gerbers/v2.1b/))
   )
 
   (net 0 "")
@@ -2053,10 +2053,10 @@
   (gr_text GND (at 132.461 98.298) (layer B.SilkS) (tstamp 5942FB18)
     (effects (font (size 1.016 1.016) (thickness 0.2032)) (justify mirror))
   )
-  (gr_text "Analog Frontend v2.1\n" (at 147.574 103.759) (layer B.SilkS) (tstamp 595FA3C0)
+  (gr_text "Analog Frontend v2.1b\n" (at 147.574 103.759) (layer B.SilkS) (tstamp 595FA3C0)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text "Columbia University \nCreative Machines Lab\nSept 26, 2017" (at 147.955 98.425) (layer B.SilkS)
+  (gr_text "Columbia University \nCreative Machines Lab\nOct 2, 2017" (at 147.955 98.425) (layer B.SilkS)
     (effects (font (size 1.27 1.27) (thickness 0.127)) (justify mirror))
   )
 

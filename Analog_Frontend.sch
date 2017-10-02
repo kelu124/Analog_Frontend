@@ -36,7 +36,7 @@ encoding utf-8
 Sheet 1 1
 Title "Analog Frontend for Low Cost Ultrasound Device"
 Date "2017-07-31"
-Rev "v2.1"
+Rev "v2.1b"
 Comp "Columbia University - Creative Machines Lab"
 Comment1 ""
 Comment2 ""
