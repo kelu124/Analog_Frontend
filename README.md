@@ -1,11 +1,11 @@
-# Analog Frontend PCB
+# Analog Frontend PCB meow
 This folder contains the design files for the analog circuitry required for a single channel of an ultrasound imaging system. 
 
 Schematic:
 ![Schematic](drawings/schematic_v1.3.png)  
 See the `drawings` folder for a high-resolution PDF version.
 
-PCB:
+PCB: 
 ![PCB](drawings/PCB_v1.3.png)  
 See the `drawings` folder for a 1:1 scale PDF version, including each layer individually. 
 
