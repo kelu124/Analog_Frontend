@@ -1072,17 +1072,6 @@ F 3 "" H 1300 7100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L L L7
-U 1 1 59FBBB93
-P 5300 1500
-F 0 "L7" V 5250 1500 50  0000 C CNN
-F 1 ".35u" V 5375 1500 50  0000 C CNN
-F 2 "Inductors_SMD:L_0603" H 5300 1500 50  0001 C CNN
-F 3 "" H 5300 1500 50  0001 C CNN
-	1    5300 1500
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Q_PMOS_DGS Q1
 U 1 1 5A08AA22
 P 3650 1200
@@ -1100,9 +1089,7 @@ Wire Notes Line
 Wire Wire Line
 	6250 3450 6600 3450
 Wire Wire Line
-	5050 1500 5150 1500
-Wire Wire Line
-	5450 1500 6650 1500
+	5050 1500 6650 1500
 Wire Notes Line
 	8300 2500 9600 2500
 Wire Notes Line
