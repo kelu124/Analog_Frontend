@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Analog_Frontend-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,8 +36,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Analog Frontend for Low Cost Ultrasound Device"
-Date "2017-07-31"
-Rev "v2.1b"
+Date "2017-11-12"
+Rev "v2.2"
 Comp "Columbia University - Creative Machines Lab"
 Comment1 ""
 Comment2 ""
@@ -753,20 +754,16 @@ Text Label 3100 6800 2    60   ~ 0
 PCAP
 Text Notes 2750 6650 0    20   ~ 0
 Decreasing the value of PCAP makes the signal have a faster fall time. We \nshould find that smallest capacitance possible that will track the envelope \nwithout tracking individual peaks of the envelope.
-Text Label 1150 2850 2    60   ~ 0
-PULSE
-Text GLabel 1150 2950 0    60   Input ~ 0
-GAIN
 $Comp
 L GND #PWR025
 U 1 1 59444FED
-P 1700 3100
-F 0 "#PWR025" H 1700 2850 50  0001 C CNN
-F 1 "GND" H 1700 2950 50  0000 C CNN
-F 2 "" H 1700 3100 50  0001 C CNN
-F 3 "" H 1700 3100 50  0001 C CNN
-	1    1700 3100
-	1    0    0    -1  
+P 1650 2850
+F 0 "#PWR025" H 1650 2600 50  0001 C CNN
+F 1 "GND" H 1650 2700 50  0000 C CNN
+F 2 "" H 1650 2850 50  0001 C CNN
+F 3 "" H 1650 2850 50  0001 C CNN
+	1    1650 2850
+	0    -1   -1   0   
 $EndComp
 Text Notes 1100 2600 0    60   ~ 0
 Edge Connector
@@ -838,17 +835,6 @@ F 3 "" H 2100 1450 50  0001 C CNN
 	1    2100 1550
 	0    1    1    0   
 $EndComp
-$Comp
-L Screw_Terminal_1x01 J4
-U 1 1 59810517
-P 2100 1100
-F 0 "J4" H 2100 1250 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 1950 1100 50  0000 C TNN
-F 2 "custom:SCREWM3" H 2100 975 50  0001 C CNN
-F 3 "" H 2100 1000 50  0001 C CNN
-	1    2100 1100
-	0    1    1    0   
-$EndComp
 Text GLabel 5650 2100 2    60   Input ~ 0
 +HV
 $Comp
@@ -866,7 +852,6 @@ Text GLabel 1150 2750 0    60   Input ~ 0
 +HV
 NoConn ~ 1100 1300
 NoConn ~ 1100 1750
-NoConn ~ 2100 1300
 NoConn ~ 2100 1750
 $Comp
 L PWR_FLAG #FLG029
@@ -934,8 +919,6 @@ F 3 "" H 3450 4050 50  0001 C CNN
 	1    3450 4050
 	1    0    0    -1  
 $EndComp
-Text GLabel 1000 4050 1    60   Input ~ 0
-20V
 $Comp
 L PWR_FLAG #FLG035
 U 1 1 59CEF568
@@ -1051,43 +1034,30 @@ Text GLabel 3200 1600 0    60   Input ~ 0
 INA
 Text GLabel 3250 1900 0    60   Input ~ 0
 INB
-$Comp
-L Conn_01x02 J?
-U 1 1 5A08C6B5
-P 2250 2800
-F 0 "J?" H 2250 2900 50  0000 C CNN
-F 1 "Conn_01x02" H 2250 2600 50  0000 C CNN
-F 2 "" H 2250 2800 50  0001 C CNN
-F 3 "" H 2250 2800 50  0001 C CNN
-	1    2250 2800
-	1    0    0    -1  
-$EndComp
-Text GLabel 2050 2800 0    60   Input ~ 0
+Text GLabel 1150 2950 0    60   Input ~ 0
 INA
-Text GLabel 2050 2900 0    60   Input ~ 0
+Text GLabel 1650 2950 2    60   Input ~ 0
 INB
 $Comp
-L MIC4426 U?
+L MIC4426-RESCUE-Analog_Frontend U1
 U 1 1 5A08D13F
 P 3800 1850
-F 0 "U?" H 3700 2350 50  0000 R CNN
+F 0 "U1" H 3700 2350 50  0000 R CNN
 F 1 "MIC4426" H 3700 2250 50  0000 R CNN
-F 2 "" H 3800 1550 50  0001 C CNN
+F 2 "custom:QFN-12-1EP_4x4mm_Pitch0.8mm" H 3800 1550 50  0001 C CNN
 F 3 "" H 3800 1550 50  0001 C CNN
 	1    3800 1850
 	1    0    0    -1  
 $EndComp
-Text GLabel 3150 1000 0    60   Input ~ 0
-+5
 Text GLabel 3050 2400 0    60   Input ~ 0
 -5
 Text GLabel 5550 1750 2    60   Input ~ 0
--LV
+-HV
 $Comp
-L C_Small C?
+L C_Small C4
 U 1 1 5A08DBAE
 P 3100 2450
-F 0 "C?" H 3110 2520 50  0000 L CNN
+F 0 "C4" H 3110 2520 50  0000 L CNN
 F 1 "0.47u" H 3110 2370 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3100 2450 50  0001 C CNN
 F 3 "" H 3100 2450 50  0001 C CNN
@@ -1095,10 +1065,10 @@ F 3 "" H 3100 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR040
 U 1 1 5A08DD08
 P 3100 2550
-F 0 "#PWR?" H 3100 2300 50  0001 C CNN
+F 0 "#PWR040" H 3100 2300 50  0001 C CNN
 F 1 "GND" H 3100 2400 50  0000 C CNN
 F 2 "" H 3100 2550 50  0001 C CNN
 F 3 "" H 3100 2550 50  0001 C CNN
@@ -1106,10 +1076,10 @@ F 3 "" H 3100 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L C_Small C6
 U 1 1 5A08DE45
 P 4500 1750
-F 0 "C?" H 4510 1820 50  0000 L CNN
+F 0 "C6" H 4510 1820 50  0000 L CNN
 F 1 "10n" H 4510 1670 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4500 1750 50  0001 C CNN
 F 3 "" H 4500 1750 50  0001 C CNN
@@ -1117,10 +1087,10 @@ F 3 "" H 4500 1750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C?
+L C_Small C7
 U 1 1 5A08DFF9
 P 4500 2050
-F 0 "C?" H 4510 2120 50  0000 L CNN
+F 0 "C7" H 4510 2120 50  0000 L CNN
 F 1 "10n" H 4510 1970 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4500 2050 50  0001 C CNN
 F 3 "" H 4500 2050 50  0001 C CNN
@@ -1128,12 +1098,12 @@ F 3 "" H 4500 2050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L FDMT800150DC Q?
+L FDMT800150DC-RESCUE-Analog_Frontend Q1
 U 1 1 5A08E744
 P 5000 1950
-F 0 "Q?" H 4800 2250 50  0000 L CNN
+F 0 "Q1" H 4800 2250 50  0000 L CNN
 F 1 "FDMT800150DC" H 4800 1700 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:TDSON-8-1" H 5000 1606 50  0001 C CIN
+F 2 "custom:SOIC-8-N" H 5000 1606 50  0001 C CIN
 F 3 "" V 5000 1950 50  0001 L CNN
 	1    5000 1950
 	1    0    0    -1  
@@ -1143,10 +1113,10 @@ psource
 Text Label 5000 2400 0    60   ~ 0
 nsource
 $Comp
-L C_Small C?
+L C_Small C9
 U 1 1 5A091DCB
 P 5550 2200
-F 0 "C?" H 5560 2270 50  0000 L CNN
+F 0 "C9" H 5560 2270 50  0000 L CNN
 F 1 "1u" H 5560 2120 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5550 2200 50  0001 C CNN
 F 3 "" H 5550 2200 50  0001 C CNN
@@ -1154,10 +1124,10 @@ F 3 "" H 5550 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L C_Small C8
 U 1 1 5A092508
 P 5450 1850
-F 0 "C?" H 5460 1920 50  0000 L CNN
+F 0 "C8" H 5460 1920 50  0000 L CNN
 F 1 "1u" H 5460 1770 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5450 1850 50  0001 C CNN
 F 3 "" H 5450 1850 50  0001 C CNN
@@ -1165,10 +1135,10 @@ F 3 "" H 5450 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR041
 U 1 1 5A092815
 P 5450 1950
-F 0 "#PWR?" H 5450 1700 50  0001 C CNN
+F 0 "#PWR041" H 5450 1700 50  0001 C CNN
 F 1 "GND" H 5450 1800 50  0000 C CNN
 F 2 "" H 5450 1950 50  0001 C CNN
 F 3 "" H 5450 1950 50  0001 C CNN
@@ -1176,10 +1146,10 @@ F 3 "" H 5450 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR042
 U 1 1 5A0928C2
 P 5550 2300
-F 0 "#PWR?" H 5550 2050 50  0001 C CNN
+F 0 "#PWR042" H 5550 2050 50  0001 C CNN
 F 1 "GND" H 5550 2150 50  0000 C CNN
 F 2 "" H 5550 2300 50  0001 C CNN
 F 3 "" H 5550 2300 50  0001 C CNN
@@ -1193,7 +1163,7 @@ Wire Notes Line
 Wire Wire Line
 	6250 3450 6600 3450
 Wire Wire Line
-	5450 1500 6650 1500
+	5400 1500 6650 1500
 Wire Notes Line
 	8300 2500 9600 2500
 Wire Notes Line
@@ -1214,7 +1184,7 @@ Wire Notes Line
 	6500 950  8100 950 
 Connection ~ 5900 1500
 Wire Wire Line
-	5900 1200 5900 1600
+	5900 1200 5900 2600
 Connection ~ 7800 1500
 Wire Wire Line
 	7800 1550 7800 1500
@@ -1378,22 +1348,12 @@ Connection ~ 1600 7100
 Wire Wire Line
 	1950 7100 1900 7100
 Wire Wire Line
-	1700 2850 1650 2850
-Connection ~ 1700 2850
-Wire Wire Line
-	1700 2950 1650 2950
-Connection ~ 1700 2950
-Wire Wire Line
 	1700 3050 1650 3050
 Connection ~ 1700 3050
 Wire Notes Line
 	5000 2800 5000 6200
 Wire Notes Line
 	10400 2800 5000 2800
-Wire Wire Line
-	1700 2750 1700 3100
-Wire Wire Line
-	1650 2750 1700 2750
 Wire Wire Line
 	3150 1000 3800 1000
 Wire Wire Line
@@ -1456,8 +1416,6 @@ Wire Wire Line
 	4300 2300 5350 2300
 Wire Wire Line
 	4700 1950 4700 1500
-Wire Wire Line
-	4700 1500 5250 1500
 Connection ~ 5300 2000
 Wire Wire Line
 	5500 2100 5650 2100
@@ -1483,4 +1441,49 @@ Wire Wire Line
 	3100 2350 3150 2350
 Connection ~ 3150 2350
 Connection ~ 3100 2350
+Text GLabel 1650 2750 2    60   Input ~ 0
+-HV
+Text GLabel 1700 3050 2    60   Input ~ 0
+-5
+Text GLabel 1150 2850 0    60   Input ~ 0
+GAIN
+$Comp
+L +5V #PWR043
+U 1 1 5A090BA8
+P 3150 1000
+F 0 "#PWR043" H 3150 850 50  0001 C CNN
+F 1 "+5V" H 3150 1140 50  0000 C CNN
+F 2 "" H 3150 1000 50  0001 C CNN
+F 3 "" H 3150 1000 50  0001 C CNN
+	1    3150 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L D D2
+U 1 1 5A091446
+P 5250 1500
+F 0 "D2" H 5250 1600 50  0000 C CNN
+F 1 "D" H 5250 1400 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 5250 1500 50  0001 C CNN
+F 3 "" H 5250 1500 50  0001 C CNN
+	1    5250 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D3
+U 1 1 5A09167C
+P 5350 2450
+F 0 "D3" H 5350 2550 50  0000 C CNN
+F 1 "D" H 5350 2350 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 5350 2450 50  0001 C CNN
+F 3 "" H 5350 2450 50  0001 C CNN
+	1    5350 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 2600 5350 2600
+Text GLabel 1000 4050 1    60   Input ~ 0
++HV
+Wire Wire Line
+	4700 1500 5100 1500
 $EndSCHEMATC
