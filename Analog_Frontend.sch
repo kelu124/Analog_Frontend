@@ -36,7 +36,7 @@ encoding utf-8
 Sheet 1 1
 Title "Analog Frontend for Low Cost Ultrasound Device"
 Date "2017-07-31"
-Rev "v2.1b"
+Rev "v2.2_op2"
 Comp "Columbia University - Creative Machines Lab"
 Comment1 ""
 Comment2 ""
@@ -819,23 +819,23 @@ $EndComp
 $Comp
 L Screw_Terminal_1x01 J2
 U 1 1 598103B0
-P 1100 1550
-F 0 "J2" H 1100 1700 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 950 1550 50  0000 C TNN
-F 2 "custom:SCREWM3" H 1100 1425 50  0001 C CNN
-F 3 "" H 1100 1450 50  0001 C CNN
-	1    1100 1550
+P 1100 1650
+F 0 "J2" H 1100 1800 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 950 1650 50  0000 C TNN
+F 2 "custom:SCREWM3" H 1100 1525 50  0001 C CNN
+F 3 "" H 1100 1550 50  0001 C CNN
+	1    1100 1650
 	0    1    1    0   
 $EndComp
 $Comp
 L Screw_Terminal_1x01 J3
 U 1 1 59810461
-P 2100 1550
-F 0 "J3" H 2100 1700 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 1950 1550 50  0000 C TNN
-F 2 "custom:SCREWM3" H 2100 1425 50  0001 C CNN
-F 3 "" H 2100 1450 50  0001 C CNN
-	1    2100 1550
+P 2100 1650
+F 0 "J3" H 2100 1800 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 1950 1650 50  0000 C TNN
+F 2 "custom:SCREWM3" H 2100 1525 50  0001 C CNN
+F 3 "" H 2100 1550 50  0001 C CNN
+	1    2100 1650
 	0    1    1    0   
 $EndComp
 $Comp
@@ -851,17 +851,6 @@ F 3 "" H 2100 1000 50  0001 C CNN
 $EndComp
 Text GLabel 3150 1000 0    60   Input ~ 0
 20V
-$Comp
-L Q_NMOS_SDG Q2
-U 1 1 59C81F08
-P 3650 1900
-F 0 "Q2" H 3850 1950 50  0000 L CNN
-F 1 "Q_NMOS_SDG" H 3850 1850 50  0000 L CNN
-F 2 "custom:SOT-23" H 3850 2000 50  0001 C CNN
-F 3 "" H 3650 1900 50  0001 C CNN
-	1    3650 1900
-	1    0    0    -1  
-$EndComp
 $Comp
 L R R12
 U 1 1 59C8297E
@@ -888,10 +877,6 @@ Text Label 3300 2000 3    60   ~ 0
 PULSE
 Text GLabel 1150 2750 0    60   Input ~ 0
 20V
-NoConn ~ 1100 1300
-NoConn ~ 1100 1750
-NoConn ~ 2100 1300
-NoConn ~ 2100 1750
 $Comp
 L PWR_FLAG #FLG029
 U 1 1 59CEC005
@@ -1071,25 +1056,12 @@ F 3 "" H 1300 7100 50  0001 C CNN
 	1    1300 7100
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Q_PMOS_DGS Q1
-U 1 1 5A08AA22
-P 3650 1200
-F 0 "Q1" H 3850 1250 50  0000 L CNN
-F 1 "Q_PMOS_DGS" H 3850 1150 50  0000 L CNN
-F 2 "custom:SOT-23" H 3850 1300 50  0001 C CNN
-F 3 "" H 3650 1200 50  0001 C CNN
-	1    3650 1200
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	10400 6200 10400 2800
 Wire Notes Line
 	5000 6200 10400 6200
 Wire Wire Line
 	6250 3450 6600 3450
-Wire Wire Line
-	5050 1500 6650 1500
 Wire Notes Line
 	8300 2500 9600 2500
 Wire Notes Line
@@ -1099,7 +1071,7 @@ Wire Notes Line
 Wire Notes Line
 	9600 900  8300 900 
 Wire Notes Line
-	5500 700  5500 2500
+	5400 700  5400 2500
 Wire Notes Line
 	6500 2350 6500 950 
 Wire Notes Line
@@ -1296,7 +1268,6 @@ Wire Wire Line
 	3300 1500 3300 2000
 Wire Wire Line
 	1650 2750 1700 2750
-Connection ~ 5050 1500
 Wire Wire Line
 	9200 1350 9200 1500
 Wire Notes Line
@@ -1310,9 +1281,6 @@ Wire Notes Line
 	2850 2500 5400 2500
 Wire Notes Line
 	2850 700  5400 700 
-Connection ~ 5150 1500
-Connection ~ 5600 1500
-Connection ~ 5450 1500
 Wire Wire Line
 	3450 1200 3450 1900
 Connection ~ 3450 1500
@@ -1326,4 +1294,72 @@ Wire Wire Line
 Connection ~ 3750 1550
 Wire Wire Line
 	3750 2100 3750 2200
+$Comp
+L Q_PMOS_GSD Q1
+U 1 1 5A0E7287
+P 3650 1200
+F 0 "Q1" H 3850 1250 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 3850 1150 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3850 1300 50  0001 C CNN
+F 3 "" H 3650 1200 50  0001 C CNN
+	1    3650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GSD Q2
+U 1 1 5A0E7784
+P 3650 1900
+F 0 "Q2" H 3850 1950 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 3850 1850 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3850 2000 50  0001 C CNN
+F 3 "" H 3650 1900 50  0001 C CNN
+	1    3650 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1500 6650 1500
+$Comp
+L GND #PWR?
+U 1 1 5A0E9085
+P 2100 1850
+F 0 "#PWR?" H 2100 1600 50  0001 C CNN
+F 1 "GND" H 2100 1700 50  0000 C CNN
+F 2 "" H 2100 1850 50  0001 C CNN
+F 3 "" H 2100 1850 50  0001 C CNN
+	1    2100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A0E9123
+P 1100 1850
+F 0 "#PWR?" H 1100 1600 50  0001 C CNN
+F 1 "GND" H 1100 1700 50  0000 C CNN
+F 2 "" H 1100 1850 50  0001 C CNN
+F 3 "" H 1100 1850 50  0001 C CNN
+	1    1100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A0E92FE
+P 1100 1300
+F 0 "#PWR?" H 1100 1050 50  0001 C CNN
+F 1 "GND" H 1100 1150 50  0000 C CNN
+F 2 "" H 1100 1300 50  0001 C CNN
+F 3 "" H 1100 1300 50  0001 C CNN
+	1    1100 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A0E939C
+P 2100 1300
+F 0 "#PWR?" H 2100 1050 50  0001 C CNN
+F 1 "GND" H 2100 1150 50  0000 C CNN
+F 2 "" H 2100 1300 50  0001 C CNN
+F 3 "" H 2100 1300 50  0001 C CNN
+	1    2100 1300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
