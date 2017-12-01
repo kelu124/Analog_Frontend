@@ -1,9 +1,9 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.7)
 
   (general
-    (links 99)
-    (no_connects 1)
-    (area 119.378499 84.941 175.412001 128.688001)
+    (links 97)
+    (no_connects 0)
+    (area 119.378499 84.941 175.412001 116.708)
     (thickness 1.6)
     (drawings 16)
     (tracks 310)
@@ -15,7 +15,7 @@
   (page USLetter)
   (title_block
     (title "Analog Frontend PCB")
-    (date 2017-07-31)
+    (date 2017-11-17)
     (rev v2.2_op2)
     (company "Columbia University Creative Machines Lab")
   )
@@ -1678,9 +1678,9 @@
     (pad 8 thru_hole oval (at 2.54 -7.62) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 1 GND))
     (model Pin_Headers.3dshapes/Pin_Header_Angled_2x04_Pitch2.54mm.wrl
-      (at (xyz 0 0 0))
+      (at (xyz 0 -0.3 -0.1))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 180 180))
     )
   )
 

@@ -35,7 +35,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Analog Frontend for Low Cost Ultrasound Device"
-Date "2017-07-31"
+Date "2017-11-17"
 Rev "v2.2_op2"
 Comp "Columbia University - Creative Machines Lab"
 Comment1 ""
